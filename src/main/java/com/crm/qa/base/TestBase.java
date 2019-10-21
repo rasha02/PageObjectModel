@@ -10,7 +10,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.crm.qa.util.TestUtil;
@@ -38,16 +38,16 @@ public class TestBase {
 	
 	
 	public static void initialization(){
-		String browserName = prop.getProperty("browser");
+		//String browserName = prop.getProperty("browser");
 		
-		if(browserName.equals("chrome")){
+	//	if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "F:/Workspace-EclipseOxygen/drivers/chromedriver.exe");	
 			driver = new ChromeDriver(); 
-		}
+		/*}
 		else if(browserName.equals("FF")){
 			System.setProperty("webdriver.gecko.driver", "F:/Workspace-EclipseOxygen/drivers/geckodriver.exe");	
 			driver = new FirefoxDriver(); 
-		}
+		}*/
 		
 		
 		e_driver = new EventFiringWebDriver(driver);
